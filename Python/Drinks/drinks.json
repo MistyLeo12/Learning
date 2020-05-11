@@ -1,0 +1,39 @@
+
+{
+  "Rum": [
+    {
+        "name": "Dark and Stormy",
+        "ingredients": [
+          "2 oz. dark rum",
+          "3 oz. ginger beer",
+          "1/2 oz. lime juice"
+        ],
+        "directions":"Fill a tall glass with ice cubes and add rum. Add ginger beer and lime juice. Stir."
+      },
+      {
+      "name": "Daiquiri",
+      "ingredients": [
+        "2 oz. white rum",
+        "1/2 tsp. superfine sugar",
+        "1/2 oz. lime juice"
+      ],
+      "directions":"Squeeze the lime into your shaker, stir in sugar, and add rum. Shake well with cracked ice, then strain into glass."
+    }
+    
+  ],
+  "Tequila":[
+    {
+        "name": "Mexican Mule",
+        "ingredients": [
+          "2 oz. tequila blanco",
+          "4 oz. ginger beer",
+          "1/2 oz. lime juice",
+          "1/2 oz orange liqueur",
+          "lime wedges and jalapeño slices"
+        ],
+        "directions":"Pour all liquids together and stir. Garnish with lime wedge and jalapeño slices"
+      }
+  ]
+  
+}
+
