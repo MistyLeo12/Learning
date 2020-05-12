@@ -7,8 +7,11 @@ class Polynomial:
         self.coefficients = coefficents
     
     def __repr__(self):
-        #returns string representation of the given polynomial
+        #returns string representation of the given coefficents
         return "Polynomial Coefficents: " + str((self.coefficients))
+
+    def degree(self):
+        return len(self.coefficients)
     
     def __call__(self, x):
         result = 0
@@ -16,6 +19,23 @@ class Polynomial:
         for coefficent in self.coefficients:
             result = result * x + coefficent
         return result
+   
+    def __str__(self): 
+         #Returns a string version of the polynomial
+        polynomial = ""
+        degree = len(self.coefficients)
+        polynomial += str(self.coefficents[0] + "x^" + str(degree))
+        for i in range(1, degree):
+            coefficent = self.coefficients[i]
+            if coefficent < 0:
+                polynomial += " - " + str(-coefficent) + "x^" + str(degree-i)
+            else:
+                polynomial += " - " + str(-coefficent) + "x^" + str(degree-i)
+        if self.coefficients[-1] < 0:
+            polynomial += " - " + str(-self.coefficients[-1])
+        else:
+            polynomial += " + " + str(self.coefficents[-1])
+        return polynomial
 
 def createPolynomial():
     coefficents = []
@@ -26,9 +46,8 @@ def createPolynomial():
             coefficents.append(int(input()))
     except:
          p = Polynomial(coefficents)
-         plotPolynomial(p)
- 
-
+    plotPolynomial(p)
+         
 def plotPolynomial(p):
     x = np.linspace(-10, 10, num=100, endpoint=True)
     fx = p(x)
