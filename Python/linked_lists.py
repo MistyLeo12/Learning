@@ -53,7 +53,7 @@ class LinkedList(object):
             else:
                 prev_node = curr_node
                 curr_node = curr_node.next
-        return False #data isn't foun
+        return False #data isn't found
 
 
 
