@@ -9,10 +9,10 @@ class Stack:
         else:
            return False
 
-    def push(self, item):
+    def push(self, item): #Puts elements on the top of the stack
         self.items.append(item)
     
-    def pop(self):
+    def pop(self): #removes the top most element from the stack as long as it is not empty
         if self.isEmpty():
             return
         else:

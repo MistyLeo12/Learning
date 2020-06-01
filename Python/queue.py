@@ -9,16 +9,16 @@ class Queue:
         else:
             return False
     
-    def add(self, item):
+    def add(self, item): # Adds an items to the end of the queue 
         self.items.append(item)
 
     def remove(self):
-        if self.isEmpty():
+        if self.isEmpty(): #removes the first item from the queue
             return 
         else:
             return self.items.pop(0)
     
-    def peek(self): #Returns the first element on the queue
+    def peek(self): #Returns the first element on the queue without removing it
         if not self.isEmpty():
             return self.items[1]
     

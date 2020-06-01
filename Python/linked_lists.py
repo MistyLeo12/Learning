@@ -7,6 +7,7 @@ class LinkedList(object):
     def __init__(self):
         self.root = Node()
         self.size = 0
+
     def get_size(self):
         curr = self.root
         counter = 0 
@@ -14,12 +15,14 @@ class LinkedList(object):
             counter += 1 
             curr = curr.next
         return counter
+
     def add(self, data):
         new_node = Node(data)
         curr = self.root
         while curr.next is not None:
             curr = curr.next
         curr.next = new_node
+
     def returnList(self):
         elements = []
         curr_node = self.root
@@ -27,6 +30,7 @@ class LinkedList(object):
             curr_node = curr_node.next
             elements.append(curr_node.data)
         return elements 
+
     def find(self, index):
         if index >= self.get_size():
             print ("Out of bounds error!")
